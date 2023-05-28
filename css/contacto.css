@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Open+Sans:ital,wght@1,600&display=swap');
+/* introducir un link de dos fuentes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    /* background: skyblue; */
+    /* añadir foto de dondo sustituyendo el color */
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(137, 66, 188);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+/* para responsive menu */
+header .navbarMenu span{
+    display: none;
+}
+header .navbar{
+    position: relative;
+    display: flex;
+}
+header .navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+header .navbar li a:hover{
+    border-bottom: 5px solid rgb(137,66,188);
+    padding: 2px;
+}
+/* contenido de la web */
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+/* formulario */
+.contenido form{
+    /* configurar el estilo del formulario y el tiempo de transformar */
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgb(239, 176, 176);
+    width: 600px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.815);
+    text-align: center;
+    transition: all 2s;
+}
+.contenido form:hover{
+    /* cambia el estilo del formulario cuando el cursor se entra en la zona del formulario */
+    color: white;
+    background: linear-gradient(217deg, rgba(255, 0, 0, 0.726), rgba(255,0,0,0) 30.71%),linear-gradient(127deg, rgba(34, 181, 214, 0.8), rgba(125, 20, 230, 0.979) 70.71%),linear-gradient(336deg, rgba(255, 255, 0, 0.79), orange 70.71%);
+}
+.contenido form .formContenido{
+    /* configurar fieldset de la clase formContenido */
+    border: 0px;
+    margin-bottom: 1rem;
+    padding: 40px;
+}
+.contenido form legend{
+    /* configurar el estilo del título del formulario */
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.contenido form .formContenido fieldset legend{
+    /* configurar el estilo de cada título de cada contenido, por ejemplo IDENTIFICACIÓN, CONTACTO, COMENTARIOS */
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.contenido form .formContenido .formContenido1 .id,.contacto{
+    /* configurar los tamaños de las dos cajas de la clase de id y la de contacto,y configurar padding de ellas para que los contenidos se ven más cómodo. */
+    width: 47%;
+    padding: 0.5rem;
+}
+.contenido form .formContenido .formContenido2{
+    /* configurar el tamaño de la de los comentarios */
+    width: 100%;
+}
+.contenido form .formContenido label{
+    /* configurar los estilos de todas etiquetas de que introduce la información, y todas etiquetas se desplaza hacia al lado más izquierda */
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    font-size: 15px;
+    text-align: left;
+}
+.contenido form fieldset div input{
+    /* configurar la zona introducida, y justo queda el borde inferior */
+    width: 50%;
+    height: 1.3rem;
+    background: #ffffff00;
+    border: 0;
+    border-bottom:2px solid black;
+    transition: 2s;
+}
+.contenido form fieldset .formContenido2 textarea{
+    /* configurar la zona de que introduce los comentarios */
+    width: 95%;
+    height: 90%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.contenido form .enviar{
+    /* configurar el botón de enviar y el tiempo de trnsformar  */
+    width: 150px;
+    height: 40px;
+    border: 0;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    background: black;
+    color: white;
+    font-size: 15px;
+    transition: all 1s;
+}
+/* estructura de div con display flex y grid */
+.contenido form .formContenido{
+    /* centrar los dos cajas de la clase de formContenido1 y la de formContenido2 dentro del formulario */
+    display: grid;
+    justify-content: center;
+}
+.contenido form .formContenido .formContenido1{
+    /* hay un espacio entre de la parte de identificación y la de contacto */
+    display: flex;
+    justify-content: space-between;
+}
+.contenido form .formContenido .formContenido1 fieldset{
+    /* colocar todos los elementos de la parte identificación y la de contacto en posición vertical */
+    display: grid;
+}
+/* animación de form */
+/* configurar el estilo de los elementos anterior */
+.contenido form .formContenido fieldset{
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    background: burlywood;
+    height: 150px;
+    transition: 0.5s;
+}
+/* se va a cambiar el color del fondo y añadir una sombra cuando tocar el formulario */
+.contenido form:hover .formContenido fieldset{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.772);
+    background: rgba(65, 63, 63, 0.795);
+}
+/* se va a cambiar el color de la zona introducido cuando tocar el formulario */
+.contenido form:hover fieldset div input{
+    border-bottom:2px solid rgb(245, 244, 244);
+    color: white;
+}
+/* se va a cambiar el color de la zona introducido cuando introduce la información */
+.contenido form fieldset div input:focus{
+    color: white;
+}
+.contenido form:hover .enviar{
+    border: 0;
+    background: rgba(255, 255, 255, 0.74);
+    box-shadow: 5px 5px 5px black;
+    color: black;
+}
+/*  */
+.contenido form div .enviar:hover{
+    border: 0;
+    background: orange;
+    box-shadow: 5px 5px 5px #A83279;
+}
+.contenido form div .enviar:focus{
+    border: 0;
+    background: white;
+    box-shadow: 5px 5px 5px black;
+}
+/*  */
+
+/* Copyright */
+.copyright{
+    position: absolute;
+    bottom: 0;
+    left: 800px;
+    margin-bottom: 20px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p{
+    color: #fff;
+    text-align: center;
+    margin-left: 100px;
+}
+/*Redes Sociales*/
+
+.redSociales{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+.redSociales li{
+    padding: 10px;
+}
+.redSociales li a{
+    color: #fff;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+.redSociales li:hover a{
+    color: #c33763;
+}
+/* ********************************** */
+/* circulo */
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* configurar el fondo de la parte del circulo */
+    background-image: url(../img/figura_circulo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+/* reponsive */
+@media (min-width:1880px) and (max-width:2000px){
+
+}
+@media (min-width:1500px) and (max-width:1880px) {
+
+}
+@media (min-width:1330px) and (max-width:1500px) {
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 25px;
+    }
+    .copyright p{
+        margin-left: 350px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:1020px) and (max-width:1330px){
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 30px;
+    }
+    .copyright p{
+        margin-left: 250px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:850px) and (max-width:1020px){
+    .contenido {
+        display: grid;
+        justify-content: center;
+    }
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 30px;
+    }
+    .copyright p{
+        font-size: 10px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+    .circulo{
+        display: none;
+    }
+}
+@media (max-width:850px){
+    /* responsive de formulario */
+    .contenido form{
+        width: 400px;
+    }
+    .contenido form legend{
+        font-size: 20px;
+    }
+    .contenido form .formContenido fieldset legend{
+        font-size: 15px;
+    }
+    .contenido form .formContenido label{
+        font-size: 10px;
+    }
+    .contenido form fieldset div input{
+        font-size: 10px;
+    }
+    .contenido form fieldset .formContenido2 textarea{
+        font-size: 10px;
+    }
+    /*  */
+    section{
+        display: grid;
+        padding-top: 30vh;
+        padding-bottom: 50px;
+    }
+    header{
+        padding: 20px;
+    }
+    /* responsive menu */
+    header .logo{
+        font-size: 20px;
+    }
+    /* cuando la anchura de la página se reduce por debajo de 850px, el menú desplegable aparecerá */
+    header .navbarMenu{
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+    header .navbarMenu span,a{
+        width: 100px;
+        display: inherit;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: all 1s;
+    }
+    header .navbarMenu .navbar{
+        width: 100px;
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.79);
+    }
+    header .navbarMenu .navbar a{
+        color: #c33763;
+    }
+    header .navbarMenu:hover span{
+        background: #c33763;
+    }
+    /* cuando toca el menú, aparecerá sus opciones que son proyecto, quien_soy,cv y contacto etc */
+    header .navbarMenu:hover .navbar{
+        display: block;
+    }
+    header .navbarMenu:hover .navbar li{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    header .navbarMenu:hover .navbar li a{
+        padding: 0;
+        font-size: 1rem;
+    }
+    /* cuando elige cada una opción de menú, ello se convertirá en un pequeño cuadrado elevado */
+    header .navbar li a:hover{
+        background: #c33763;
+        color: white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.712);
+    }
+    /*  */
+    .contenido {
+        display: grid;
+        justify-content: center;
+        padding: 0;
+    }
+    /*  */
+    footer{
+        display: grid;
+    }
+    .copyright{
+        position: inherit;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 30px;
+    }
+    .copyright p{
+        font-size: 10px;
+        margin: 0;
+    }
+    .redSociales{
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+    .circulo{
+        display: none;
+    }
+}

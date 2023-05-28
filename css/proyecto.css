@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Open+Sans:ital,wght@1,600&display=swap');
+/* introducir un link de dos fuentes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    /* background: skyblue; */
+    /* añadir foto de dondo sustituyendo el color */
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(137, 66, 188);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+/* para responsive menu */
+header .navbarMenu span{
+    display: none;
+}
+header .navbar{
+    position: relative;
+    display: flex;
+}
+header .navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+header .navbar li a:hover{
+    border-bottom: 5px solid rgb(137,66,188);
+    padding: 2px;
+}
+/* contenido de la web */
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+/* galería de proyecto */
+.slider{
+    position: relative;
+    width: 10vw;
+    height: 22vh;
+    transform-style: preserve-3d;
+    /* configura la animación infinita */
+    animation: rotate 30s linear infinite;
+}
+@keyframes rotate{
+    /* configurar distancia dentro el centro de rotación y la pantalla, configurar la velocidad del ángulo de rotación cada 30s */
+    0%{
+        transform: perspective(1000px)rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px)rotateY(360deg);
+    }
+}
+.slider div{
+    /* configurar el estilo de cada caja  */
+    border-top: 5px solid #efc804;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* colocar el centro de la rotación en posición central */
+    transform-origin: center;
+    transform-style: preserve-3d;
+    /* configurar el ángulo de la rotación para que no se deja superponer las cartas */
+    transform: rotateY(calc(var(--i)*50deg)) translateZ(25vw);
+}
+.slider div p{
+    /* configurar el estilo del titulo de cada carta */
+    background: #c33763;
+    box-shadow: 0 0 20px red;
+    transform: rotate3d(1,1,1,50deg);
+}
+.slider div img{
+    /* configurar el estilo de cada carta para que se ve como un obra del arte */
+    background: #efc80496;
+    width: 100%;
+    height: 80%;
+    /* girar las cartas hacia adentro 30 deg */
+    transform: rotate3d(1,1,1,30deg);
+    transition: all 1s;
+    /* lo importante que las cartas se deja tener las luces propios */
+    box-shadow: 0 0 20px #efc804;
+}
+.slider img:hover{
+    /* devolver la carta en la posición sin girar y cambiar el color del luz cuando tocar la imagen */
+    transform: rotate3d(1,1,1,0);
+    box-shadow: 0 0 20px #04efe7;
+}
+/*  */
+
+/* Copyright */
+.copyright{
+    position: absolute;
+    bottom: 0;
+    left: 800px;
+    margin-bottom: 20px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p{
+    color: #fff;
+    text-align: center;
+    margin-left: 100px;
+}
+/*Redes Sociales*/
+
+.redSociales{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+.redSociales li{
+    padding: 10px;
+}
+.redSociales li a{
+    color: #fff;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+.redSociales li:hover a{
+    color: #c33763;
+}
+/* ********************************** */
+/* circulo */
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* configurar el fondo de la parte del circulo */
+    background-image: url(../img/figura_circulo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+/* reponsive */
+@media (min-width:1880px) and (max-width:2000px){
+
+}
+@media (min-width:1500px) and (max-width:1880px) {
+
+}
+@media (min-width:1330px) and (max-width:1500px) {
+
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 25px;
+    }
+    .copyright p{
+        margin-left: 350px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:1020px) and (max-width:1330px){ 
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 30px;
+    }
+    .copyright p{
+        margin-left: 250px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:850px) and (max-width:1020px){
+    .contenido {
+        display: grid;
+        justify-content: center;
+    }
+    /* formulario */
+    /*  */
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 30px;
+    }
+    .copyright p{
+        font-size: 10px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+    .circulo{
+        display: none;
+    }
+}
+@media (max-width:850px){
+    /* responsive de animación */
+    .slider div p{
+        font-size: 65%;
+    }
+    /*  */
+    section{
+        display: grid;
+        padding-top: 30vh;
+        padding-bottom: 50px;
+    }
+    header{
+        padding: 20px;
+    }
+    /* responsive menu */
+    header .logo{
+        font-size: 20px;
+    }
+    /* cuando la anchura de la página se reduce por debajo de 850px, el menú desplegable aparecerá */
+    header .navbarMenu{
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+    header .navbarMenu span,a{
+        width: 100px;
+        display: inherit;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: all 1s;
+    }
+    header .navbarMenu .navbar{
+        width: 100px;
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.79);
+    }
+    header .navbarMenu .navbar a{
+        color: #c33763;
+    }
+    header .navbarMenu:hover span{
+        background: #c33763;
+    }
+    /* cuando toca el menú, aparecerá sus opciones que son proyecto, quien_soy,cv y contacto etc */
+    header .navbarMenu:hover .navbar{
+        display: block;
+    }
+    header .navbarMenu:hover .navbar li{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    header .navbarMenu:hover .navbar li a{
+        padding: 0;
+        font-size: 1rem;
+    }
+    /* cuando elige cada una opción de menú, ello se convertirá en un pequeño cuadrado elevado */
+    header .navbar li a:hover{
+        background: #c33763;
+        color: white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.712);
+    }
+    /*  */
+    .contenido {
+        display: grid;
+        justify-content: center;
+        padding: 0;
+    }
+    /*  */
+    footer{
+        display: grid;
+    }
+    .copyright{
+        position: inherit;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 30px;
+    }
+    .copyright p{
+        font-size: 10px;
+        margin: 0;
+    }
+    .redSociales{
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+    .circulo{
+        display: none;
+    }
+}

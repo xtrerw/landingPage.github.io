@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Lora:wght@600&family=Open+Sans:ital,wght@1,600&family=Roboto&display=swap');
+/* introducir un link de cuatro fuentes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    /* background: skyblue; */
+    /* añadir foto de dondo sustituyendo el color */
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+/* background */
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+/*  */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(137, 66, 188);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+/* para responsive menú, al primero se deja desaparecer el menú desplegable */
+header .navbarMenu span{
+    display: none;
+}
+header .navbar{
+    position: relative;
+    display: flex;
+}
+header .navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+header .navbar li a:hover{
+    border-bottom: 5px solid rgb(137,66,188);
+    padding: 2px;
+}
+/* contenido de la web */
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+.contenido .tituloBox{
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+}
+.contenido .tituloBox h2{
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+.contenido .tituloBox h2 span{
+    background: rgb(137, 66, 188);
+    padding: 0 10px;
+    color: white;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.contenido .tituloBox p{
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: white;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.contenido .tituloBox a:hover{
+    color: #fff;
+    background: rgb(137, 66, 188);
+    transition: 0.5s;
+}
+
+.contenido .tituloBox a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(137, 66, 188);
+    background: #fff;
+    padding: 10px 20px;
+    margin: left 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.contenido .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: -50px;
+    z-index: -5;
+}
+.contenido .imgBox img{
+    height: 80vh;
+}
+.contenido .imgBox img:hover{
+    height: 80vh;
+}
+/* Copyright */
+.copyright{
+    position: absolute;
+    bottom: 0;
+    left: 800px;
+    margin-bottom: 20px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p{
+    color: #fff;
+    text-align: center;
+    margin-left: 100px;
+}
+/*Redes Sociales*/
+
+.redSociales{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+.redSociales li{
+    padding: 10px;
+}
+.redSociales li a{
+    color: #fff;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+.redSociales li:hover a{
+    color: #c33763;
+}
+/* ********************************** */
+/* circulo */
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(2,211,108,0.386);
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+/* reponsive */
+@media (min-width:1880px) and (max-width:2000px){
+    .contenido .imgBox{
+        padding-right: 0%;
+    }
+    .contenido .imgBox img{
+        height: 70vh;
+    }
+}
+@media (min-width:1500px) and (max-width:1880px) {
+    .contenido .imgBox{
+        padding-right: 0%;
+    }
+    .contenido .imgBox img{
+        height: 60vh;
+    }
+}
+@media (min-width:1330px) and (max-width:1500px) {
+    .contenido .tituloBox h2{
+        font-size: 2.5rem;
+    }
+    .contenido .tituloBox p{
+        font-size: 1.5rem;
+    }
+    .contenido .imgBox{
+        padding-right: 0%;
+    }
+    .contenido .imgBox img{
+        height: 50vh;
+    }
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 25px;
+    }
+    .copyright p{
+        margin-left: 350px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:1020px) and (max-width:1330px){
+    .contenido .tituloBox h2{
+        font-size: 2rem;
+    }
+    .contenido .tituloBox p{
+        font-size: 1rem;
+    }
+    .contenido .tituloBox a:hover{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .contenido .tituloBox a{
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+    }
+    .contenido .imgBox{
+        padding-right: 0%;
+    }
+    .contenido .imgBox img{
+        height: 50vh;
+    }
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 30px;
+    }
+    .copyright p{
+        margin-left: 250px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:850px) and (max-width:1020px){
+    .contenido {
+        display: grid;
+        justify-content: center;
+    }
+    .contenido .tituloBox h2{
+        font-size: 2rem;
+    }
+    .contenido .tituloBox p{
+        font-size: 1rem;
+    }
+    .contenido .tituloBox a:hover{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .contenido .tituloBox a{
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+    }
+    .contenido .imgBox{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .contenido .imgBox img{
+        height: 50vh;
+    }
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 0 30px 30px;
+    }
+    .copyright p{
+        font-size: 10px;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+    .circulo{
+        display: none;
+    }
+}
+@media (max-width:850px){
+    section{
+        display: grid;
+        padding-top: 30vh;
+        padding-bottom: 50px;
+    }
+    header{
+        padding: 20px;
+    }
+    /* responsive menu */
+    header .logo{
+        font-size: 20px;
+    }
+    /* cuando la anchura de la página se reduce por debajo de 850px, el menú desplegable aparecerá */
+    header .navbarMenu{
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+    header .navbarMenu span,a{
+        width: 100px;
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: all 1s;
+    }
+    header .navbarMenu .navbar{
+        width: 100px;
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.79);
+    }
+    header .navbarMenu .navbar a{
+        color: #c33763;
+    }
+    header .navbarMenu:hover span{
+        background: #c33763;
+    }
+    /* cuando toca el menú, aparecerá sus opciones que son proyecto, quien_soy,cv y contacto etc */
+    header .navbarMenu:hover .navbar{
+        display: block;
+    }
+    header .navbarMenu:hover .navbar li{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    header .navbarMenu:hover .navbar li a{
+        padding: 0;
+        font-size: 1rem;
+    }
+    /* cuando elige cada una opción de menú, ello se convertirá en un pequeño cuadrado elevado */
+    header .navbar li a:hover{
+        background: #c33763;
+        color: white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.712);
+    }
+    /* responsive de contenido */
+    .contenido {
+        display: grid;
+        justify-content: center;
+        padding: 0;
+    }
+    .contenido .tituloBox h2{
+        font-size: 1rem;
+    }
+    .contenido .tituloBox p{
+        font-size: 0.5rem;
+    }
+    .contenido .tituloBox a:hover{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .contenido .tituloBox a{
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+    }
+    .contenido .imgBox{
+        padding:0;
+        justify-content: center;
+        width: auto;
+    }
+    .contenido .imgBox img{
+        margin-top: 30px;
+        height: 40vh;
+    }
+    /* responsive de footer */
+    footer{
+        display: grid;
+    }
+    .copyright{
+        position: inherit;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 0px;
+        padding: 30px;
+    }
+    .copyright p{
+        font-size: 10px;
+        margin: 0;
+    }
+    .redSociales{
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .redSociales li a{
+        font-size: 1.5rem;
+    }
+    .circulo{
+        display: none;
+    }
+}

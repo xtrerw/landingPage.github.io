@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Contacto</title>
+</head>
+<body>
+    <section>
+        <div class="circulo"></div>
+        <header>
+            <!-- menú -->
+            <!-- el logo para devolver a la página principal -->
+            <a href="index.htm" class="logo">Wei Xu</a>
+            <div class="navbarMenu">
+                <a href=""><span>Menú</span></a>
+                <ul class="navbar">
+                    <li>
+                        <a href="quien_soy.html">Quién soy</a>
+                    </li>
+                    <li>
+                        <a href="cv.html">CV</a>
+                    </li>
+                    <li>
+                        <a href="proyecto.html">Proyecto destacados</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>   
+        </header>
+        <div class="contenido">
+            <form action="" method="post">
+                <legend>contacto</legend>
+                <fieldset class="formContenido">
+                    <div class="formContenido1">
+                        <fieldset class="id">
+                            <legend>identificación</legend>
+                            <label for="">nombre
+                                <input type="text" required>
+                            </label>
+
+                            <label for="">apellido
+                                <input type="text" required>
+                            </label>
+                            
+                            <label for="">apellido2
+                                <input type="text">
+                            </label>
+
+                            <label for="">dni
+                                <input type="text" minlength="9" maxlength="9" required>
+                            </label>
+                        </fieldset>
+                        <fieldset class="contacto">
+                            <legend>contacto</legend>
+                            <label for="">telefóno
+                                <input type="tel" minlength="9" maxlength="9" required>
+                            </label>
+                            
+                            <label for="">fijo
+                                <input type="tel" minlength="9" maxlength="9">
+                            </label>
+                            
+                            <label for="">e-mail
+                                <input type="email" required>
+                            </label>
+                            
+                        </fieldset>
+                    </div>
+                    <div class="formContenido2">
+                        <fieldset>
+                            <legend>comentarios</legend>
+                            <textarea name="" id=""></textarea>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <input type="submit" class="enviar" value="Enviar">
+                    </div>
+                    
+                </fieldset>
+                
+            </form>
+        </div>
+        <footer>
+            <div class="copyright">
+                <p>&copy;Web Personal creada para la materia de la Lenguaje de Marcas <br> del CFGS ASIR / DAM / DAW</p>
+            </div>
+            <ul class="redSociales">
+                <li>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
+                        <ion-icon name="mail-open-outline"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/%E6%A2%85%E8%A5%BF-%E9%95%BF%E9%97%A8-a57b31250/">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/xtrerw/landingPage">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </section>
+</body>
+</html>
