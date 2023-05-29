@@ -234,8 +234,10 @@ header .navbar li a:hover{
         display: grid;
         justify-content: center;
     }
-    /* formulario */
-    /*  */
+     /* responsive de animación */
+     .slider div p{
+        font-size: 65%;
+    }
     .copyright{
         position: absolute;
         bottom: 0;
